@@ -11,6 +11,7 @@
             "es2015",
             "dom",
         ],
+        "noEmitOnError": true,
         /* Specify library files to be included in the compilation. */
         "allowJs": true,
         /* Allow javascript files to be compiled. */
@@ -32,7 +33,8 @@
         /* Strict Type-Checking Options */
         "strict": false,
         /* Enable all strict type-checking options. */
-        // "noImplicitAny": true,                 /* Raise error on expressions and declarations with an implied 'any' type. */
+        "noImplicitAny": true,
+        /* Raise error on expressions and declarations with an implied 'any' type. */
         // "strictNullChecks": true,              /* Enable strict null checks. */
         // "strictFunctionTypes": true,           /* Enable strict checking of function types. */
         // "strictPropertyInitialization": true,  /* Enable strict checking of property initialization in classes. */
