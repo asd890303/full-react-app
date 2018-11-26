@@ -1,20 +1,36 @@
-https://docs.microsoft.com/zh-tw/visualstudio/javascript/tutorial-nodejs-with-react-and-jsx?view=vs-2017
-
-pm2
-
-pm2 stop all
-pm2 start lib/server.js --watch
-
-nvm use 10.24
-nvm ls
-
-apt-get update
-
-npm install yarn
-yarn add
 
 
+<h1>How To</h1>
+<hr />
+<h3>Init</h3>
+<ul>
+    <li>
+        npm -i yarn -g
+    </li>
+    <li>
+        npm i -g babel-cli
+    </li>
+    <li>
+        npm i -g babel-cli
+    </li>
+    <li>
+        npm i -g webpack-cli
+    </li>
+    <li>
+        npm install
+    </li>
+</ul>
 
-<h1>Start</h1>
+<h3>Start</h3>
+<hr />
+<ul>
+    <li>
+        $ yarn dev
+    </li>
+</ul>
 
-$ yarn dev
+<hr />
+<h1>Reference</h1>
+<a href='https://docs.microsoft.com/zh-tw/visualstudio/javascript/tutorial-nodejs-with-react-and-jsx?view=vs-2017 pm2 pm2 stop all pm2 start lib/server.js --watch nvm use 10.24 nvm ls apt-get update npm install yarn yarn add
+
+'></a>
