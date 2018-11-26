@@ -200,6 +200,32 @@
     eventemitter2 "^4.1.0"
     ws "^3.0.0"
 
+"@types/node@*":
+  version "10.12.10"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.10.tgz#4fa76e6598b7de3f0cb6ec3abacc4f59e5b3a2ce"
+  integrity sha512-8xZEYckCbUVgK8Eg7lf5Iy4COKJ5uXlnIOnePN0WUwSQggy9tolM+tDJf7wMOnT/JT/W9xDYIaYggt3mRV2O5w==
+
+"@types/prop-types@*":
+  version "15.5.6"
+  resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.5.6.tgz#9c03d3fed70a8d517c191b7734da2879b50ca26c"
+  integrity sha512-ZBFR7TROLVzCkswA3Fmqq+IIJt62/T7aY/Dmz+QkU7CaW2QFqAitCE8Ups7IzmGhcN1YWMBT4Qcoc07jU9hOJQ==
+
+"@types/react-dom@^16.0.10":
+  version "16.0.10"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-16.0.10.tgz#0c8980a639fa1d92a8547c8b6d0cf47af96c8966"
+  integrity sha512-CsUWfZBpj7SGBX/05bnvnsOUx+Uo6n7DoRVP7vYB5NWsanjHi60NWGZac8DstuXhdc7rasxI/j4D3hxgNSWlzg==
+  dependencies:
+    "@types/node" "*"
+    "@types/react" "*"
+
+"@types/react@*", "@types/react@^16.7.7":
+  version "16.7.7"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.7.7.tgz#1e5e23e7dd922968ed4b484cdec00a5402c9f31b"
+  integrity sha512-dJiq7CKxD1XJ/GqmbnsQisFnzG4z5lntKBw9X9qeSrguxFbrrhGa8cK9s0ONBp8wL1EfGfofEDVhjen26U46pw==
+  dependencies:
+    "@types/prop-types" "*"
+    csstype "^2.2.0"
+
 "@webassemblyjs/ast@1.7.11":
   version "1.7.11"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.7.11.tgz#b988582cafbb2b095e8b556526f30c90d057cace"
@@ -1905,6 +1931,11 @@ crypto-browserify@^3.11.0:
     public-encrypt "^4.0.0"
     randombytes "^2.0.0"
     randomfill "^1.0.3"
+
+csstype@^2.2.0:
+  version "2.5.7"
+  resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.5.7.tgz#bf9235d5872141eccfb2d16d82993c6b149179ff"
+  integrity sha512-Nt5VDyOTIIV4/nRFswoCKps1R5CD1hkiyjBE9/thNaNZILLEviVw9yWQw15+O+CpNjQKB/uvdcxFFOrSflY3Yw==
 
 culvert@^0.1.2:
   version "0.1.2"

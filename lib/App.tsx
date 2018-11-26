@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './content/css/App.css';
+import * as ReactDOM from 'react-dom';
 import AppProps from './moudle/AppProps';
 import AppState from './moudle/AppState';
 import Main from './component/main';
