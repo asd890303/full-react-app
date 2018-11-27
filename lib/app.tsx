@@ -13,7 +13,7 @@ class App extends React.Component<AppProps, AppState> {
     public render() {
         return (
             <div>
-               React!
+               <p>React!</p>
             </div>
         );
     }
@@ -23,7 +23,3 @@ ReactDOM.render(
   <App />,
   document.getElementById('root') as HTMLElement
 );
-
-
-// <Header />
-// <Main />

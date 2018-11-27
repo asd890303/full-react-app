@@ -1,8 +1,9 @@
+const path = require('path');
 module.exports = {
-    entry: "./lib/App.tsx",
+    entry: "./lib/app.tsx",
     output: {
         filename: "bundle.js",
-        path: __dirname + "/lib/dist"
+        path: __dirname + "/public"
     },
 
     // Enable sourcemaps for debugging webpack's output.
