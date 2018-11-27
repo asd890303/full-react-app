@@ -1,7 +1,5 @@
-
-
 <h1>How To</h1>
-<hr />
+
 <h3>Init</h3>
 <ul>
     <li>
@@ -22,14 +20,13 @@
 </ul>
 
 <h3>Start</h3>
-<hr />
+
 <ul>
     <li>
         $ yarn dev
     </li>
 </ul>
 
-<hr />
 <h1>Reference</h1>
 <a href='https://docs.microsoft.com/zh-tw/visualstudio/javascript/tutorial-nodejs-with-react-and-jsx?view=vs-2017 pm2 pm2 stop all pm2 start lib/server.js --watch nvm use 10.24 nvm ls apt-get update npm install yarn yarn add
 
