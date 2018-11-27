@@ -1,6 +1,6 @@
 import * as React from 'react';
-import MainProps from '../moudle/MainProps';
-import MainState from '../moudle/MainState';
+import MainProps from '../module/MainProps';
+import MainState from '../module/MainState';
 import ItemList from './itemList';
 
 const testData = [{

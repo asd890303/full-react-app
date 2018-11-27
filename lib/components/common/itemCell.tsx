@@ -1,5 +1,5 @@
 import * as React from 'react';
-import ItemCell from '../moudle/ItemCell';
+import ItemCell from '../module/ItemCell';
 
 class ItemList extends React.Component<ItemCell> {
     constructor(props: ItemCell) {

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import MainProps from '../moudle/MainProps';
+import MainProps from '../module/MainProps';
 import ItemCell from './itemCell';
 
 class ItemList extends React.Component<MainProps> {

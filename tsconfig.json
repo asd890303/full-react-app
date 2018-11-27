@@ -2,18 +2,16 @@
     "compilerOptions": {
         "outDir": "./public/",
         "sourceMap": true,
-        "noImplicitAny": false,
+        "noImplicitAny": true,
         "module": "commonjs",
         "target": "es5",
-        "jsx": "react",
-        "lib": ["es5", "es6", "dom"]
+        "allowJs": true,
+        "jsx": "react"
     },
     "include": [
         "./lib/**/*"
     ],
-    "awesomeTypescriptLoaderOptions": {
-        "reportFiles": [
-            "./src/**/*"
-        ]
-    }
+    "exclude": [
+        "./node_modules/**/*"
+    ]
 }
