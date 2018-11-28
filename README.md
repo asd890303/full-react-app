@@ -3,10 +3,7 @@
 <h3>Init</h3>
 <ul>
     <li>
-        npm -i yarn -g
-    </li>
-    <li>
-        npm i -g babel-cli
+        npm install yarn -g
     </li>
     <li>
         npm i -g babel-cli
@@ -15,13 +12,16 @@
         npm i -g webpack-cli
     </li>
     <li>
-        npm install
+        npm install / yarn install
     </li>
 </ul>
 
 <h3>Start</h3>
 
 <ul>
+    <li>
+        $ yarn build / yarn webpack
+    </li>
     <li>
         $ yarn dev
     </li>
