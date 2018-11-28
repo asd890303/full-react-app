@@ -13,7 +13,8 @@ class App extends React.Component<AppProps, AppState> {
     public render() {
         return (
             <div>
-               <p>React! Lamnor FATTTTTTTTTTTT!!</p>
+             <Header />
+             <Main />
             </div>
         );
     }

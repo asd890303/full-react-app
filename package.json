@@ -7,7 +7,8 @@
   "author": "",
   "scripts": {
     "dev": "pm2 start lib/bin/server.js --watch --interpreter babel-node",
-    "webpack": "webpack -wd"
+    "webpack": "webpack -wd",
+    "build": "webpack --mode production"
   },
   "babel": {
     "presets": [

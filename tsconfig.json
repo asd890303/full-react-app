@@ -9,9 +9,9 @@
         "jsx": "react"
     },
     "include": [
-        "./lib/**/*"
+        "./lib/components/**"
     ],
     "exclude": [
-        "./node_modules/**/*"
+        "node_modules"
     ]
 }
