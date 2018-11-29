@@ -7,13 +7,13 @@
   "author": "",
   "scripts": {
     "dev": "pm2 start lib/bin/server.js --watch --interpreter babel-node",
+    "windev": "babel-node ./lib/bin/server.js",
     "webpack": "webpack -wd",
     "build": "webpack --mode production"
   },
   "babel": {
     "presets": [
-      "react",
-      [
+      "react", [
         "env",
         {
           "targets": {
@@ -38,6 +38,7 @@
     "babel-preset-stage-2": "^6.24.1",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
+    "mobx": "^5.6.0",
     "pm2": "^3.2.2",
     "source-map-loader": "^0.2.4",
     "ts-loader": "^5.3.0",
