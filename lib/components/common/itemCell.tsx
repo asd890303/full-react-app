@@ -7,6 +7,7 @@ class ItemList extends React.Component<ItemCell> {
     }
 
     public render() {
+
         return (
             <div className="itemcell">
                 <div>

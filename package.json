@@ -6,10 +6,11 @@
   "license": "ISC",
   "author": "",
   "scripts": {
+    "babel-server": "babel-node lib/bin/server.js --watch",
     "dev": "pm2 start lib/bin/server.js --watch --interpreter babel-node",
-    "windev": "babel-node ./lib/bin/server.js",
+    "win-dev": "pm2 start npm -- run babel-server",
     "webpack": "webpack -wd",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production -wd"
   },
   "babel": {
     "presets": [

@@ -6,6 +6,7 @@ interface ItemBase {
     updated: string;
     content?: string;
     price: string;
+    site: string;
 }
 
 export default ItemBase;

@@ -2,6 +2,7 @@ import * as React from 'react';
 import MainProps from '../module/MainProps';
 import MainState from '../module/MainState';
 import ItemList from './itemList';
+import SearchSection from './searchSeaction';
 
 const testData = [{
     id: 0,
@@ -11,7 +12,8 @@ const testData = [{
     updated: '2018/11/19 16:04:27',
     content: 'test',
     imgUrl: 'http://d.ecimg.tw/items/DRAH7GA9008XUIQ/000001_1524111998.jpg',
-    price: '5699'
+    price: '5699',
+    site: '24pchome'
 }, {
     id: 0,
     name: '美光 Crucial MX500 1TB/M.2 SATA 2280/讀:560M/寫:510M/64層3D TLC/五年保固*捷元代理商公司貨*',
@@ -20,7 +22,8 @@ const testData = [{
     updated: '2018/11/19 16:04:27',
     content: 'test',
     imgUrl: 'https://www.sinya.com.tw/upload/prod/118409.jpg',
-    price: '5499'
+    price: '5499',
+    site: 'sinya'
 }];
 
 class Main extends React.Component<MainProps, MainState> {
@@ -30,7 +33,7 @@ class Main extends React.Component<MainProps, MainState> {
         // todo:test data
         this.state = {
             itemList: testData,
-            updated: '2018/11/19 16:10:33'
+            updated: new Date().toDateString()
         };
     }
 
@@ -53,6 +56,9 @@ class Main extends React.Component<MainProps, MainState> {
         return (
             <div className="Main">
                 <ItemList itemList={this.state.itemList} />
+                <div className="main-updated">
+                {this.state.updated}
+                </div>
             </div>
         );
     }
