@@ -29,8 +29,7 @@ const testData = [{
 class Main extends React.Component<MainProps, MainState> {
     constructor(props: MainProps) {
         super(props);
-        
-        // todo:test data
+
         this.state = {
             itemList: testData,
             updated: new Date().toDateString()
