@@ -1,4 +1,4 @@
-interface ItemBase {
+export default interface ItemBase {
     id: number;
     name: string;
     type: string;
@@ -8,5 +8,3 @@ interface ItemBase {
     price: string;
     site: string;
 }
-
-export default ItemBase;

@@ -1,4 +1,4 @@
-/// <reference path="./test.d.ts" />
+// / <reference path="./test.d.ts" />
 interface AppProps {
     test: number
 }
