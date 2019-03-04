@@ -1,34 +1,34 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
-import { inject, observer, Provider } from 'mobx-react';
-import { observable, action, computed } from 'mobx';
+import { Provider, inject, observer } from 'mobx-react';
+import { action, computed, observable } from 'mobx';
 
-import HomeState from '../states/base.state';
 import Header from "./common/header";
+import HomeState from "../states/home.state";
 
-// @MobxIsomorphic(HomeState)
-
-// @inject("HomeState")
-// @observer
-export class Home extends React.Component {
-    constructor(props: any) {
+interface HomeProps {
+    store: HomeState;
+}
+// @inject("store")
+@observer
+export default class Index extends React.Component<any, any> {
+    constructor(props: HomeProps) {
         super(props);
+        console.log(props);
+    }
+
+    handleClick = () => {
+        // this.props.store.prototype.handleClick();
+        this.props.store.handleClick();
     }
 
     public render() {
         return (
             <React.Fragment>
                 <Header />
-                <h1>HHH</h1>
+                <button onClick={this.handleClick}>Click</button>
             </React.Fragment>
         );
     }
 }
-
-ReactDOM.render(
-    <Provider store={HomeState}>
-        <Home />
-    </Provider>,
-    document.getElementById('root') as HTMLElement
-);

@@ -2,7 +2,7 @@ var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
-    entry: "./src/components/home.tsx",
+    entry: "./src/components/app.tsx",
     output: {
         filename: "site.js",
         path: __dirname + "/public"
@@ -14,7 +14,7 @@ module.exports = {
     devtool: "false",
     resolve: {
         // Add '.ts' and '.tsx' as resolvable extensions.
-        extensions: [".ts", ".tsx", ".js", ".json", "jsx"]
+        extensions: [".ts", ".tsx", ".js", ".json"]
     },
     externals: {
         "react": "React",
