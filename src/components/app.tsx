@@ -7,14 +7,15 @@ import { action, computed, observable } from 'mobx';
 import Home from "./home";
 import HomeState from "../states/home.state";
 
-const store = {
-    HomeState
+const homeState = new HomeState();
+const stores = {
+    homeState
 }
 
-// useStrict(true);
+// useStrict(true);s
 // window._____APP_STATE_____ = stores;
 ReactDOM.render(
-    <Provider {...store}>
+    <Provider store={homeState}>
         <Home />
     </Provider>,
     document.getElementById('root') as HTMLElement

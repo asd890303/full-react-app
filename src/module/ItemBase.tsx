@@ -3,6 +3,7 @@ export default interface ItemBase {
     name: string;
     type: string;
     url: string;
+    imgUrl: string;
     updated: string;
     content?: string;
     price: string;
