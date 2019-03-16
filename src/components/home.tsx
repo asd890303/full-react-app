@@ -3,7 +3,7 @@ import * as ReactDOM from "react-dom";
 
 import { Provider, inject, observer } from 'mobx-react';
 import { action, computed, observable } from 'mobx';
-
+import ReactLoading from "react-loading";
 import Header from "./common/header";
 import HomeState from "../states/home.state";
 
@@ -23,10 +23,17 @@ export default class Index extends React.Component<any, any> {
         this.props.store.handleClick();
     }
 
+    componentDidMount() =>{
+        this.props.store.initHomePage();
+    }
     public render() {
+        const {isLoading} = this.props.store;
         return (
             <React.Fragment>
-                <Header />
+              
+              {
+                 isLoading &&   <ReactLoading type={`SpinningBubbles`} color="#61DAFB" />
+              }
                 <button onClick={this.handleClick}>Click</button>
             </React.Fragment>
         );

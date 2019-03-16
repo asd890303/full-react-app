@@ -3,10 +3,15 @@ import { action, computed, observable } from 'mobx';
 import BaseState from './base.state';
 
 export default class HomeState extends BaseState {
-    @observable aa: boolean = false;
+    @observable isLoading: boolean = true;
 
+    constructor() {
+    super();
+    // this.priceAlertService = new PriceAlertService(this.applicationState);
+  }
+  
     @action.bound
     handleClick() {
-        console.log("init home state get");
+        console.log("state handleClick");
     }
 }
