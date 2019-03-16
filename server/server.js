@@ -1,6 +1,7 @@
 var express = require('express');
 var path = require('path');
 var ejs = require('ejs');
+var config = require('./config');
 
 const app = express();
 app.use('/public', express.static('public'));
@@ -9,9 +10,9 @@ app.set('view engine', 'ejs');
 app.get('/', (req, res) => {
     res.render('index');
 });
-var port = 8080;
-app.listen(port, function listenHandler() {
-    console.info(`Running on ${port}`);
+
+app.listen(config.port, function listenHandler() {
+    console.info(`Running on ${config.port}`);
 });
 
 

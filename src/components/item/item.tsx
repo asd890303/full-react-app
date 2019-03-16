@@ -14,7 +14,7 @@ interface ItemProps {
 
 @inject("store")
 @observer
-export default class Item extends React.Component<ItemProps, any> {
+export class Item extends React.Component<ItemProps, any> {
     constructor(props: ItemProps) {
         super(props);
         console.log(props);

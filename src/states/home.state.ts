@@ -6,14 +6,13 @@ import ItemBase from 'components/module/ItemBase';
 export default class HomeState extends BaseState {
 
     @observable isLoading: boolean = true;
-    @observable text: string = "default";
     @observable itemList: ItemBase[];
 
     constructor() {
-    super();
-    // this.priceAlertService = new PriceAlertService(this.applicationState);
-  }
-  
+        super();
+        // this.priceAlertService = new PriceAlertService(this.applicationState);
+    }
+
     @action.bound
     handleClick() {
         console.log("state handleClick");
@@ -42,6 +41,5 @@ export default class HomeState extends BaseState {
             price: '5499',
             site: 'sinya'
         }]
-        console.log(this.itemList);
     }
 }

@@ -1,16 +1,26 @@
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
 
-class Header extends React.Component {
-  public render() {
+import { Provider, inject, observer } from 'mobx-react';
+
+@inject("store")
+@observer
+export class Header extends React.Component<any, any> {
+  render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src="https://i.imgur.com/GJjQqEX.png" className="App-logo" alt="logo" />
-        </header>
-      </div>
+      <>
+        <div className="header" data-view="header">
+          <div className="header_logo">
+            <a href="#">Market</a>
+          </div>
+
+          <div className="header_menu">
+            <div className="header_refresh_btn">
+              <a className="refresh_btn" href="javascript:void(0)" onClick={this.props.store.handleRefresh}>Refresh</a>
+            </div>
+          </div>
+        </div>
+      </>
     );
   }
 }
-
-export default Header;

@@ -4,6 +4,7 @@ import * as ReactDOM from "react-dom";
 import { Provider, inject, observer } from 'mobx-react';
 import { action, computed, observable } from 'mobx';
 
+import { Header } from "./common/header";
 import Home from "./home";
 import HomeState from "../states/home.state";
 
@@ -16,7 +17,11 @@ const stores = {
 // window._____APP_STATE_____ = stores;
 ReactDOM.render(
     <Provider store={homeState}>
-        <Home />
+        <React.Fragment>
+            <Header />
+            {/* {Route} */}
+            <Home />
+        </React.Fragment>
     </Provider>,
     document.getElementById('root') as HTMLElement
 )
