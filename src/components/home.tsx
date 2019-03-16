@@ -6,20 +6,26 @@ import { action, computed, observable } from 'mobx';
 import ReactLoading from "react-loading";
 import Header from "./common/header";
 import HomeState from "../states/home.state";
+import Item from "./item/item";
+import { clearObserving } from "mobx/lib/internal";
 
 interface HomeProps {
-    store: HomeState;
+    props: HomeState;
 }
-// @inject("store")
+
+@inject("store")
 @observer
-export default class Index extends React.Component<any, any> {
+export default class Home extends React.Component<any, any> {
     constructor(props: HomeProps) {
         super(props);
         console.log(props);
     }
 
+    componentDidMount() {
+        this.props.store.initHomePage();
+    }
+
     handleClick = () => {
-        // this.props.store.prototype.handleClick();
         this.props.store.handleClick();
     }
 
@@ -27,14 +33,24 @@ export default class Index extends React.Component<any, any> {
         this.props.store.initHomePage();
     }
     public render() {
-        const {isLoading} = this.props.store;
+
+        const {isLoading,itemList} = this.props.store;
+      
         return (
             <React.Fragment>
-              
-              {
+            {
                  isLoading &&   <ReactLoading type={`SpinningBubbles`} color="#61DAFB" />
-              }
-                <button onClick={this.handleClick}>Click</button>
+               }
+               
+                {itemList && itemList.length > 0 &&
+                    itemList.map((item, index) => {
+                        <Item item={item} />
+                    })
+                }
+ 
+               
+                <span>{this.props.store.text}</span>
+                <button onClick={this.handleClick}>Click!</button>
             </React.Fragment>
         );
     }

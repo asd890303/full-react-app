@@ -1,10 +1,15 @@
 import { action, computed, observable } from 'mobx';
 
 export default class BaseState {
-    @observable test: boolean = false;
+    @observable baseVar: boolean = false;
+    @observable timeState: string;
+
+    constructor() {
+        this.timeState = new Date().toLocaleString();
+        console.log(this.timeState);
+    }
 
     @action.bound
-    public getInfo(parm?:boolean) {
-        console.log(parm);
+    public getBaseInfo(parm?: boolean) {
     }
 }
