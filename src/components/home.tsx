@@ -32,18 +32,22 @@ export default class Home extends React.Component<any, any> {
 
         return (
             <React.Fragment>
-                <div className="updated">
-                    <span>{timeState}</span>
-                </div>
+                <div className="content">
+                    <div className="updated">
+                        <span>{timeState}</span>
+                    </div>
 
-                <LazyLoading isLoading={isLoading} />
-                {itemList && itemList.length > 0 &&
-                    itemList.map((item, index) => {
-                        <Item item={item} />
-                    })
-                }
-                {/* <span>{this.props.store.text}</span>
-                <button onClick={this.handleClick}>Click!</button> */}
+                    <LazyLoading isLoading={isLoading} />
+                    {itemList && itemList.length > 0 &&
+                        <div className="item_list">
+                            <ul>
+                                {itemList.map((item, index) => {
+                                    return <Item item={item} />
+                                })}
+                            </ul>
+                        </div>
+                    }
+                </div>
             </React.Fragment>
         );
     }

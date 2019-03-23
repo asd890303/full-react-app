@@ -7,14 +7,15 @@
         "module": "commonjs",
         "target": "es6",
         "lib": [
+            "es7",
+            "es5",
             "es2015",
-            "es2017",
-            "dom"
+            "dom",
         ],
+        // "allowJs": true,
         "removeComments": true,
         "allowSyntheticDefaultImports": false,
         "jsx": "react",
-        "allowJs": true,
         "baseUrl": "./",
         "paths": {
             "components/*": [

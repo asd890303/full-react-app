@@ -1,8 +1,8 @@
-import { action, computed, observable } from 'mobx';
+import { action, computed, observable, toJS } from 'mobx';
 
 import BaseState from './base.state';
 import ItemBase from 'components/module/ItemBase';
-
+import axios from 'axios';
 export default class HomeState extends BaseState {
 
     @observable isLoading: boolean = true;
@@ -20,6 +20,11 @@ export default class HomeState extends BaseState {
 
     @action.bound
     initHomePage = () => {
+
+        // axios.get(`https://jsonplaceholder.typicode.com/users`)
+        //     .then(res => {
+        //     })
+
         this.itemList = [{
             id: 0,
             name: '美光Micron Crucial MX500 1TB M.2 2280 SATAⅢ 固態硬碟',
@@ -41,5 +46,7 @@ export default class HomeState extends BaseState {
             price: '5499',
             site: 'sinya'
         }]
+
+        console.log(toJS(this.itemList));
     }
 }

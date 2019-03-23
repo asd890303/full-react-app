@@ -1,5 +1,5 @@
-public
-public/*.js
+# public
+public/site.js
 
 # Logs
 logs
