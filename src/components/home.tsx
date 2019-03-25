@@ -33,10 +33,6 @@ export default class Home extends React.Component<any, any> {
         return (
             <React.Fragment>
                 <div className="content">
-                    <div className="updated">
-                        <span>{timeState}</span>
-                    </div>
-
                     <LazyLoading isLoading={isLoading} />
                     {itemList && itemList.length > 0 &&
                         <div className="item_list">
@@ -47,6 +43,9 @@ export default class Home extends React.Component<any, any> {
                             </ul>
                         </div>
                     }
+                    <div className="updated">
+                        <span>{timeState}</span>
+                    </div>
                 </div>
             </React.Fragment>
         );

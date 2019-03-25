@@ -27,26 +27,26 @@ export class Item extends React.Component<ItemProps, any> {
         return (
             <React.Fragment>
                 <li className="item_cell">
+                    <input value={this.props.item.id} type="hidden" />
                     <a href={item.url ? item.url : "javascript:void(0)"}>
                         <ItemImage url={item.imgUrl} />
-                        <div className="item_info">
-                            <ul>
-                                <li className="item_title">
-                                    {item.name}
-                                </li>
-                                <li className="item_title">
-                                    {item.price}
-                                </li>
-                                <li className="item_title">
-                                    {item.site}
-                                </li>
-                                <li className="item_title">
-                                    {item.updated}
-                                </li>
-                            </ul>
-                        </div>
-                        <input value={this.props.item.id} type="hidden" />
                     </a>
+                    <div className="item_info">
+                        <ul>
+                            <li className="item_title">
+                                {item.name}
+                            </li>
+                            <li className="item_description item_price">
+                                {`$`}{item.price}
+                            </li>
+                            <li className="item_description">
+                                {item.site}
+                            </li>
+                            <li className="item_title">
+                                {item.updated}
+                            </li>
+                        </ul>
+                    </div>
                 </li>
             </React.Fragment>
         );

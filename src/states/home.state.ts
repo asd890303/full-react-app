@@ -13,18 +13,7 @@ export default class HomeState extends BaseState {
         // this.priceAlertService = new PriceAlertService(this.applicationState);
     }
 
-    @action.bound
-    handleClick() {
-        console.log("state handleClick");
-    }
-
-    @action.bound
-    initHomePage = () => {
-
-        // axios.get(`https://jsonplaceholder.typicode.com/users`)
-        //     .then(res => {
-        //     })
-
+    private getItem = () => {
         this.itemList = [{
             id: 0,
             name: '美光Micron Crucial MX500 1TB M.2 2280 SATAⅢ 固態硬碟',
@@ -46,7 +35,21 @@ export default class HomeState extends BaseState {
             price: '5499',
             site: 'sinya'
         }]
-
         console.log(toJS(this.itemList));
+
+        this.isLoading = false;
+    }
+
+    @action.bound
+    handleClick() {
+        console.log("state handleClick");
+    }
+
+    @action.bound
+    initHomePage = () => {
+        setTimeout(this.getItem, 3000);
+        // axios.get(`https://jsonplaceholder.typicode.com/users`)
+        //     .then(res => {
+        //     })
     }
 }
